@@ -64,3 +64,4 @@ CI runs about 25,000 operations (corner cases and constrained-random operands) a
 
 > [!IMPORTANT]
 > Your module and port names are up to you, but the port count, directions, widths and behavior must match this spec. If your names differ, map them in `rnr-stage.yaml`.
+

@@ -4,6 +4,16 @@ Starter repo for an IEEE-754 single-precision floating-point adder/subtractor (G
 
 Spec: [FP_AddSub/](FP_AddSub/)
 
+## Implemented design
+
+`FP_AddSub/rtl.sv` implements binary32 addition/subtraction with round-to-nearest,
+ties-to-even, gradual underflow, canonical NaNs, signed zeros and infinities.
+The result and valid signal are registered at the accepting clock edge.
+
+Run `make test` and `make synth`. See [implementation, test methodology and
+Vivado instructions](docs/IMPLEMENTATION.md) and [validation results](docs/VALIDATION.md).
+The supplied GitHub Actions workflow is supplementary to the official course CI.
+
 ## Submit
 
 1. Install the **`risc-n-roll-ci`** GitHub App on your group's repo (that exact repo, or CI never sees it).
@@ -11,3 +21,4 @@ Spec: [FP_AddSub/](FP_AddSub/)
 3. Submit your repo link (one per group) through the course form.
 
 CI checks each push on its next run, which can take a few hours. Its synthesizer (Yosys 0.33) cannot parse assignment patterns like `'{default: 0}`; use a `for` loop instead.
+
