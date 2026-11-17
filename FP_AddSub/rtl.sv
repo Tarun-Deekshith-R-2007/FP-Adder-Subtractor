@@ -35,7 +35,7 @@ module fp_addsub (
     reg [7:0] packed_exp;
     integer exp_a, exp_b, exp_z, k;
 
-    always @* begin
+    always_comb begin
         sa = a[31];
         sb = b[31] ^ sub;
         ea = a[30:23];
