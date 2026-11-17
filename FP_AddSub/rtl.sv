@@ -47,6 +47,7 @@ module fp_addsub (
         larger = 0; lesser = 0; normalized = 0;
         total = 0; rounded = 0; packed_exp = 0;
         sign_z = 0; exp_z = 0; next_result = 0;
+        k = 0;
 
         if ((ea == 255 && a[22:0] != 0) ||
             (eb == 255 && b[22:0] != 0))
